@@ -8,4 +8,4 @@ scalacOptions in ThisBuild ++= Seq("-unchecked", "-deprecation")
 
 libraryDependencies += "org.scalatest" %% "scalatest" % "2.1.6" % "test"
 
-//scalacOptions += "-Xprint:typer"
+scalacOptions += "-Xprint:typer"

@@ -5,6 +5,6 @@ object MathConstants {
 object ImplicitParameters {
 
   // TODO: Exercise 2 - make the test pass without importing Math.Constants here
-  def calculateCircumference(radius: Double): Double = ???
+  def calculateCircumference(radius: Double) (implicit p:Double): Double = 2*radius*p
 
 }

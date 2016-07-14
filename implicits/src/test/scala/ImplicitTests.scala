@@ -1,14 +1,13 @@
-import Mocks._
 import org.scalatest._
 
 class ImplicitTests extends FlatSpec with MustMatchers {
+  import ImplicitConversions._
   "Implicit conversions" should "be used" in {
-    import ImplicitConversions._
     "abcdefg".toUpper must be("ABCDEFG")
   }
 
   "Implicit conversions" should "also be used" in {
-    import ImplicitConversions._
+    //import ImplicitConversions._
     val rs = RichString("abcdefg")
     rs.length() must be(7)
   }

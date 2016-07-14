@@ -24,5 +24,5 @@ object ContextBounds {
 
   // ----------------------------------------
   // TODO: Exercise 3 - return what is needed for test no 4 to succeed
-  def provideRequiredImplicit = ???
+  def provideRequiredImplicit = IntComparator
 }
