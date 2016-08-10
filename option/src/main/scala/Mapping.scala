@@ -14,13 +14,17 @@ object Mapping {
     "Luxembourg" -> 0.543)
 
   //implement this first
-  def getPopulationOf(place: String): Option[Double] = ???
+  def getPopulationOf(place: String): Option[Double] = populationInMillions.get(place)
 
   //implement this second
   def addPopulationsOf(places: String*): Option[Double] = {
-    val maybePopulations: Seq[Option[Double]] = ???
+    val maybePopulations: Seq[Option[Double]] = places.map (getPopulationOf )
     maybePopulations.foldLeft(Option(0.0))((aggOpt, opt) => aggOpt match {
-      case _ => ???
+      case None => None
+      case Some(aggV) => opt match {
+        case None => None
+        case Some (pop) => Some(aggV + pop)
+      }
     })
   }
 

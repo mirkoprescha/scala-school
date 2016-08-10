@@ -3,6 +3,7 @@ class CityNameConstants(cities: List[String]) {
 
   def uppercaseGerman(str: String) = if (str.contains('ß')) None else Some(str.toUpperCase())
 
+  //pattern matching
   def getUsingMatch(c: Char): Option[String] = {
     val city = citiesByFirst.get(c)
     val uppercased = city match {
@@ -12,12 +13,14 @@ class CityNameConstants(cities: List[String]) {
     ?? // hint: return Some(...replace(' ', '_'))
   }
 
+  //map
   def getUsingMap(c: Char): Option[String] = {
     val city = citiesByFirst.get(c)
     val uppercased = city.flatMap(???)
     uppercased.map(???)
   }
 
+  //for comprehension
   def getUsingFor(c: Char): Option[String] = {
     for {
       city <- ??
